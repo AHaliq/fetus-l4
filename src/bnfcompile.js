@@ -16,9 +16,12 @@ if (is_bnfc) {
     const str = fs.readFileSync(`${f}.bnf`).toString();
     const c = new Compiler();
     c.AddLanguage(str, f);
-    const { rules, init } = require(`../${f}.js`);
+    const { rules, init, inputs, render } = require(`../${f}.js`);
     c.SetRuleEvents(rules);
-    c.ParseScript("1 + 234", init);
-    console.log(init.calculations);
+    inputs.map(i => {
+      const s = {...init};
+      c.ParseScript(i, s);
+      console.log(render(s));
+    });
   });
 }
