@@ -5,7 +5,7 @@ currently the repo has a general framework to accept multiple grammars
 this is so that we can iterate multiple grammars and test them rapidly while designing fetus-l4
 
 ```
-npm run i
+npm i
 npm run compile -- grammars/test
 ```
 
