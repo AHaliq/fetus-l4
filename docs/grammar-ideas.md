@@ -28,6 +28,9 @@ UPON : Event -> Bool
 BEFORE : Event -> Bool
 ```
 
+- we need to distinguish the IF that specifies predicates as constraints for a regulative; and IF that is a constructor for a list of predicates forming a constitutive
+
+
 Logical Bool Operators
 
 ```
@@ -46,8 +49,6 @@ event_within : Event -> Event -> Event
 
 - design the totally ordered set of OrderedSymbols
 
-
-- we need to distinguish the IF that specifies predicates as constraints for a regulative; and IF that is a constructor for a list of predicates forming a constitutive
 # SUGAR
 ```
 Action = Regulative
