@@ -11,11 +11,11 @@ npm run compile -- grammars/test
 
 # TODO
 
-generalize parse to take in list of strings, to be included into grammar `js` file
-output to be saved to a file
+- generalize parse to take in list of strings, to be included into grammar `js` file
+- output to be saved to a file
 
 # TODO future
 
-react app to take in fetus-l4 strings
-?? ast viewer
-render ast as... (output)
+- react app to take in fetus-l4 strings
+- ?? ast viewer
+- render ast as... (output)
