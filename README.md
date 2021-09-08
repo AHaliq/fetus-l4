@@ -18,3 +18,9 @@ npm run compile -- grammars/test
     - `init`: the initial state object used when parsing
     - `inputs`: list of strings to be used as input to parse
     - `render`: a function that takes in the state object and outputs a string
+
+## BNFC support
+
+- eventually we can run `npm run compile -- --bnfc grammars/g1 grammars/g2`
+- to make parsers from bnfc format files e.g. `test.cf`
+- currently this is not supported
