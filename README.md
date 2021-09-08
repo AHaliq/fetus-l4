@@ -9,12 +9,12 @@ npm run i
 npm run compile -- grammars/test
 ```
 
-# TODO
+## defining grammars
 
-- test case output to be saved to a file
-
-# TODO future
-
-- react app to take in fetus-l4 strings
-- ?? ast viewer
-- render ast as... (output)
+- define a grammar in `grammars/` dir
+- each grammar has to have the same name e.g. test will have `test.bnf` and `test.js`
+- js files needs to export:
+    - `rules`: the object argument for `c.SetRuleEvents`
+    - `init`: the initial state object used when parsing
+    - `inputs`: list of strings to be used as input to parse
+    - `render`: a function that takes in the state object and outputs a string
