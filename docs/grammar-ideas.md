@@ -38,6 +38,7 @@ WHENC = UNLESSC = IFC
 
 WHO : Party -> Bool -> Party
 WHO = IFC
+WHICH = WHO
 
 AFTER = GIVEN
 BY = BEFORE
