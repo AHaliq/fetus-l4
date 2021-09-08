@@ -46,24 +46,43 @@ BY = BEFORE
 ```
 
 Logical Bool Operators
-- and
-- or
-- not
-- xor
+
+```
+and : Bool -> Bool -> Bool
+or : Bool -> Bool -> Bool
+not : Bool -> Bool
+xor : Bool -> Bool -> Bool
+```
 
 Regulative Composition
-- And (HENCE)
-- Xor (LEST)
-- Or (?? does this even make sense)
+```
+HENCE : Regulative -> Regulative -> Regulative
+-- AND compose two regulatives
+LEST : Regulative -> Regulative -> Regulative
+-- XOR compose two regulatives
+
+-- Or (?? does this even make sense or exists)
+```
 
 Event Arithmetic
-- After
-- before
-- within
+```
+event_after : Event -> Event
+event_before : Event -> Event
+event_within : Event -> Event -> Event
+```
 
-symbolic binding (constitutive)
+- design the totally ordered set of OrderedSymbols
+
+# TODO
+
+symbolic binding (constitutive variables)
 - party
 - event
 
-# TODO
-Quantitative types?
+Quantitative types
+- partially ordered set of quantitative symbols
+- functions that map quantitative symbols to Bool
+
+Integer types
+- choose i out of n predicates
+- ?? do we need arithmetic ??
