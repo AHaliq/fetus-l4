@@ -11,8 +11,7 @@ npm run compile -- grammars/test
 
 # TODO
 
-- generalize parse to take in list of strings, to be included into grammar `js` file
-- output to be saved to a file
+- test case output to be saved to a file
 
 # TODO future
 
