@@ -12,7 +12,7 @@ npm run compile -- grammars/test
 ## defining grammars
 
 - define a grammar in `grammars/` dir
-- each grammar has to have the same name e.g. test will have `test.bnf` and `test.js`
+- each grammar has to have the same named files e.g. `test` will have `test.bnf` and `test.js`
 - js files needs to export:
     - `rules`: the object argument for `c.SetRuleEvents`
     - `init`: the initial state object used when parsing
