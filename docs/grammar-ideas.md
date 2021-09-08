@@ -28,6 +28,25 @@ UPON : Event -> Bool
 BEFORE : Event -> Bool
 ```
 
+Logical Bool Operators
+
+```
+and : Bool -> Bool -> Bool
+or : Bool -> Bool -> Bool
+not : Bool -> Bool
+xor : Bool -> Bool -> Bool
+```
+
+Event Arithmetic
+```
+event_after : Event -> Event
+event_before : Event -> Event
+event_within : Event -> Event -> Event
+```
+
+- design the totally ordered set of OrderedSymbols
+
+
 - we need to distinguish the IF that specifies predicates as constraints for a regulative; and IF that is a constructor for a list of predicates forming a constitutive
 # SUGAR
 ```
@@ -45,14 +64,7 @@ BY = BEFORE
 
 ```
 
-Logical Bool Operators
-
-```
-and : Bool -> Bool -> Bool
-or : Bool -> Bool -> Bool
-not : Bool -> Bool
-xor : Bool -> Bool -> Bool
-```
+# TODO
 
 Regulative Composition
 ```
@@ -64,16 +76,7 @@ LEST : Regulative -> Regulative -> Regulative
 -- Or (?? does this even make sense or exists)
 ```
 
-Event Arithmetic
-```
-event_after : Event -> Event
-event_before : Event -> Event
-event_within : Event -> Event -> Event
-```
-
-- design the totally ordered set of OrderedSymbols
-
-# TODO
+- will need some new type or update Regulative
 
 symbolic binding (constitutive variables)
 - party
