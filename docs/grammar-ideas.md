@@ -1,11 +1,13 @@
 # TYPES
 ```
 Regulatives = HENCE Regulative Regulatives | LEST Regulative Regulatives | ONLY Regulative
-Regulative = R Party Deontic [Bool] Regulative | Action
+Regulative = R (Maybe Party) Deontic [Bool] Regulatives | Action
 Constitutive = C [Bool]
 Deontic = MUST | MAY | SHANT
 Bool = TRUE | FALSE
 ```
+
+- If `Nothing` is specified for a `Regulative` term, it means the party it is referring to is inherited when it is used in a `Regulatives` expression
 
 # CONSTANTS
 ```
