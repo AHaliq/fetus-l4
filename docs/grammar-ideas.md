@@ -88,7 +88,7 @@ BY = BEFORE
 - variables are identifiers bound to some value or user input
 - we have variables for:
     - Constitutive ( Party, Event )
-    - Regulative   ( Actions, Regulative Clauses )
+    - Regulatives
     - Bool         ( Predicates, Constraints )
 
 # TODO
@@ -100,3 +100,6 @@ Quantitative types
 Integer types
 - choose i out of n predicates
 - ?? do we need arithmetic ??
+
+Definition hierarchy
+- some sort of module system that automatically names variables (e.g. 1.1.2, 3.4.1.6)
