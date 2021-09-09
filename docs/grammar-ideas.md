@@ -1,12 +1,14 @@
 # TYPES
 ```
 Regulatives = HENCE Regulative Regulatives | LEST Regulative Regulatives | ONLY Regulative
-Regulative = R (Maybe Party) Deontic [Bool] Regulatives | Action
-Constitutive = C [Bool]
+Regulative = R (Maybe Party) Deontic [Bool] Regulatives | Symbol
+Constitutive = C [Bool] Symbol
 Deontic = MUST | MAY | SHANT
 Bool = TRUE | FALSE
+Symbol
 ```
 
+- Symbols are identifiers like in prolog or something like unique strings
 - If `Nothing` is specified for a `Regulative` term, it means the party it is referring to is inherited when it is used in a `Regulatives` expression
 
 # CONSTANTS
@@ -69,6 +71,7 @@ lest : Regulatives -> Regulatives -> Regulatives
 
 # SUGAR
 ```
+Action = Symbol
 Event = Constitutive
 Party = Constitutive
 
