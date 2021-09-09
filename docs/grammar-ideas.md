@@ -1,17 +1,11 @@
 # TYPES
 ```
-Regulative = R Party Deontic [Bool] Regulative | Symbol
-Constitutive a = C a [Bool]
+Regulatives = HENCE Regulative Regulatives | LEST Regulative Regulatives | ONLY Regulative
+Regulative = R Party Deontic [Bool] Regulative | Action
+Constitutive = C [Bool]
 Deontic = MUST | MAY | SHANT
 Bool = TRUE | FALSE
-Event = Constitutive OrderedSymbol
-Party = Constitutive Symbol
-Symbol
-OrderedSymbol
 ```
-
-- symbols are just identifiers like in prolog
-- ordered symbols are symbols that have an order relation with every other ordered symbol (total ordered set)
 
 # CONSTANTS
 ```
@@ -23,9 +17,6 @@ now : Event
 ```
 IFR : Regulative -> Bool -> Regulative
 IFC : Constitutive -> Bool -> Constituitve
-GIVEN : Event -> Bool
-UPON : Event -> Bool
-BEFORE : Event -> Bool
 ```
 
 - we need to distinguish the IF that specifies predicates as constraints for a regulative; and IF that is a constructor for a list of predicates forming a constitutive
@@ -40,18 +31,44 @@ not : Bool -> Bool
 xor : Bool -> Bool -> Bool
 ```
 
-Event Arithmetic
+Event Comparison
+```
+(<) : Event -> Event -> Bool
+(>) : Event -> Event -> Bool
+(=) : Event -> Event -> Bool
+within : Event -> Event -> Event -> Bool
+```
+
+- the user will need to define the function `(<)` on all Events defined in the contract where predicates involving them are needed
+
+Event Comparison to now
+
+```
+GIVEN : Event -> Bool
+UPON : Event -> Bool
+BEFORE : Event -> Bool
+```
+
+Create Events Relative to another
 ```
 event_after : Event -> Event
 event_before : Event -> Event
 event_within : Event -> Event -> Event
 ```
 
-- design the totally ordered set of OrderedSymbols
+Regulative Composition
+```
+HENCE : Regulatives -> Regulatives -> Regulatives
+-- AND compose two regulatives
+LEST : Regulatives -> Regulatives -> Regulatives
+-- XOR compose two regulatives
+```
+
 
 # SUGAR
 ```
-Action = Regulative
+Event = Constitutive
+Party = Constitutive
 
 WHENR = UNLESSR = IFR
 WHENC = UNLESSC = IFC
@@ -62,26 +79,17 @@ WHICH = WHO
 
 AFTER = GIVEN
 BY = BEFORE
-
 ```
+
+# Variables
+
+- variables are identifiers bound to some value or user input
+- we have variables for:
+    - Constitutive ( Party, Event )
+    - Regulative   ( Actions, Regulative Clauses )
+    - Bool         ( Predicates, Constraints )
 
 # TODO
-
-Regulative Composition
-```
-HENCE : Regulative -> Regulative -> Regulative
--- AND compose two regulatives
-LEST : Regulative -> Regulative -> Regulative
--- XOR compose two regulatives
-
--- Or (?? does this even make sense or exists)
-```
-
-- will need some new type or update Regulative
-
-symbolic binding (constitutive variables)
-- party
-- event
 
 Quantitative types
 - partially ordered set of quantitative symbols
