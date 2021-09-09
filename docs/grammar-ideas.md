@@ -60,9 +60,9 @@ event_within : Event -> Event -> Event
 
 Regulative Composition
 ```
-HENCE : Regulatives -> Regulatives -> Regulatives
+hence : Regulatives -> Regulatives -> Regulatives
 -- AND compose two regulatives
-LEST : Regulatives -> Regulatives -> Regulatives
+lest : Regulatives -> Regulatives -> Regulatives
 -- XOR compose two regulatives
 ```
 
